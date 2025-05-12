@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "atomiccct"
+name = "inmemory-auctioneer"
 version = "0.1.0"
