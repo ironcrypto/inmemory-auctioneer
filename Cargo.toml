@@ -1,5 +1,5 @@
 [package]
-name = "atomiccct"
+name = "inmemory-auctioneer"
 version = "0.1.0"
 edition = "2024"
 description = "A low-latency in-memory Auctioneer for MEV-Boost relays using gossip and CRDTs."
@@ -10,7 +10,7 @@ license = "MIT"
 tokio = { version = "1.35", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-uuid = { version = "1.4", features = ["v4"] }
+uuid = { version = "1.4", features = ["v4", "serde"] }
 log = "0.4"
 env_logger = "0.11.8"
 rand = "0.9.1"
