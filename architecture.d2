@@ -1,0 +1,27 @@
+direction: right
+
+title: In-Memory Auctioneer Architecture
+
+Auctioneer: {
+  shape: rectangle
+  style: {
+    fill: "#f0f0f0"
+  }
+}
+
+Bid: {
+  shape: rectangle
+  style: {
+    fill: "#e0e0e0"
+  }
+}
+
+Builder: {
+  shape: rectangle
+  style: {
+    fill: "#d0d0d0"
+  }
+}
+
+Builder -> Auctioneer: submits
+Auctioneer -> Bid: processes 

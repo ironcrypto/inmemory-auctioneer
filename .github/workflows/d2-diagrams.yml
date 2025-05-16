@@ -1,19 +1,38 @@
 name: Render D2 Diagrams
-on: push
+on: 
+  push:
+    paths:
+      - '**.d2'
+      - '.github/workflows/d2-diagrams.yml'
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install D2
         run: |
           curl -fsSL https://d2lang.com/install.sh | sh -s -- --prefix /usr/local
+          d2 --version
+      - name: List files
+        run: ls -la
       - name: Render D2 diagram
-        run: d2 my_diagram.d2 my_diagram.svg
+        run: |
+          for file in *.d2; do
+            if [ -f "$file" ]; then
+              echo "Processing $file"
+              d2 "$file" "${file%.d2}.svg"
+            fi
+          done
       - name: Commit and push
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add my_diagram.svg
-          git commit -m "Update D2 diagram"
+          git add *.svg
+          git status
+          git diff --staged
+          git commit -m "Update D2 diagrams" || echo "No changes to commit"
           git push 
