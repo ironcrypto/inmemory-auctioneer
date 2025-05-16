@@ -1,6 +1,6 @@
 [![Version](https://img.shields.io/badge/version-0.0.1-blue)](https://github.com/your/repo)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Build](https://img.shields.io/github/actions/workflow/status/your/repo/build.yml)](https://github.com/your/repo/actions)
+
 
 # Gossip-Synced In-Memory Auctioneer for MEV-Boost Relays
 
