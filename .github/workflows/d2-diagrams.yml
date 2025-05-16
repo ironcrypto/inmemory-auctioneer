@@ -1,0 +1,19 @@
+name: Render D2 Diagrams
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install D2
+        run: |
+          curl -fsSL https://d2lang.com/install.sh | sh -s -- --prefix /usr/local
+      - name: Render D2 diagram
+        run: d2 my_diagram.d2 my_diagram.svg
+      - name: Commit and push
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add my_diagram.svg
+          git commit -m "Update D2 diagram"
+          git push 
