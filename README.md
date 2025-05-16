@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/badge/version-0.0.1-blue)](https://github.com/your/repo)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Build](https://img.shields.io/github/actions/workflow/status/your/repo/build.yml)](https://github.com/your/repo/actions)
+
 # Gossip-Synced In-Memory Auctioneer for MEV-Boost Relays
 
 This project implements a high-performance, Rust-based in-memory Auctioneer designed to replace Redis in the critical `get_header` path of PBS relays like [Titan's Helix](https://github.com/gattaca-com/helix). It synchronizes bids across geo-distributed nodes using a CRDT-based gossip protocol, aiming to reduce latency, eliminate centralized coordination, and improve proposer and builder outcomes.
