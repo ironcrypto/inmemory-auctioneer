@@ -63,28 +63,7 @@ graph TD
 - Relay-side TEE: Ensures best bid selection is tamper-proof and fast
 - Optional Proposer TEE: May be used to verify attestations or simulate payloads privately in the future
 
-```d2
-direction: right
-
-Validator: Proposer (Validator)
-Builder: Builder Node
-Relay: Helix Relay
-TEE1: TEE (Builder)
-TEE2: TEE (Relay)
-TEE3: TEE (Optional: Proposer)
-Consensus: Ethereum Beacon Chain
-
-Proposer -> Relay: "get_header"
-Builder -> TEE1: "Build block"
-TEE1 -> Relay: "Submit attested bid"
-Relay -> TEE2: "Select best bid"
-TEE2 -> Proposer: "Return signed header"
-Proposer -> Relay: "get_payload"
-
-TEE1: style.fill = "#eef", style.stroke = "#00f"
-TEE2: style.fill = "#eef", style.stroke = "#00f"
-TEE3: style.fill = "#ddd", style.dashed = true
-```
+![TEE Integration](docs/diagrams/tee_integration.svg)
 
 ## 📁 Structure
 
