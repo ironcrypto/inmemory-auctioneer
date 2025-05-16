@@ -1,0 +1,1 @@
+/Users/stephanethomas/myML/rust/inmemory-auctioneer/target/debug/libinmemory_auctioneer.rlib: /Users/stephanethomas/myML/rust/inmemory-auctioneer/src/auctioneer.rs /Users/stephanethomas/myML/rust/inmemory-auctioneer/src/bid.rs /Users/stephanethomas/myML/rust/inmemory-auctioneer/src/lib.rs
