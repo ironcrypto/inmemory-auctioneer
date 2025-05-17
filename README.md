@@ -73,7 +73,7 @@ inmemory-auctioneer/
 ├── README.md
 ├── docs/
 │   ├── FRP.md          # Full research proposal
-│   ├── workplan.md          # Full research proposal
+│   ├── workplan.md     # workplan
 │   └── diagrams/
 ├── src/
 │   ├── auctioneer.rs   # Core in-memory logic
