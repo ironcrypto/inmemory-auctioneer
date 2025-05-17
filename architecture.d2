@@ -6,6 +6,7 @@ Auctioneer: {
   shape: rectangle
   style: {
     fill: "#f0f0f0"
+
   }
 }
 
@@ -24,4 +25,5 @@ Builder: {
 }
 
 Builder -> Auctioneer: submits
+Auctioneer -> Bid: processes 
 Auctioneer -> Bid: processes 

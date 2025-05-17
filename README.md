@@ -72,18 +72,25 @@ inmemory-auctioneer/
 ├── Cargo.toml
 ├── README.md
 ├── docs/
-│   └── FRP.md          # Full research proposal
+│   ├── FRP.md          # Full research proposal
+│   ├── workplan.md          # Full research proposal
+│   └── diagrams/
 ├── src/
-│   ├── main.rs         # Entry point and example
 │   ├── auctioneer.rs   # Core in-memory logic
-│   ├── gossip.rs       # Gossip layer for syncing
 │   ├── bid.rs          # Bid struct and merge logic
-│   └── config.rs       # Runtime parameters
+│   ├── config.rs       # Runtime parameters
+│   ├── gossip.rs       # Gossip layer for syncing
+│   ├── lib.rs          # Lib
+│   └── main.rs         # Entry point and example
+└── tests/
+│   ├── auctioneer.rs   # test auctioneer
+│   ├── bid.rs          # test bid
+│   └── gossip.rs       # test gossip
 └── benchmarks/
     └── gossip_latency.rs
 ```
 
-## 🧪 Initial Targets (Week 1–2)
+## 🧪 Initial Targets (Phase 1)
 
 * ✅ Bid struct + merge logic
 * 🔲 UDP gossip skeleton
